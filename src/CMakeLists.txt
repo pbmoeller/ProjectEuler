@@ -3,11 +3,14 @@ set(PROBLEMS_HEADERS
 )
 
 set(PROBLEMS_SOURCES
-    "problems/1-100/p1.cpp"
-    "problems/1-100/p2.cpp"
-    "problems/1-100/p3.cpp"
-    "problems/1-100/p4.cpp"
-    "problems/1-100/p5.cpp"
+    "problems/1-100/1-20/p1.cpp"
+    "problems/1-100/1-20/p2.cpp"
+    "problems/1-100/1-20/p3.cpp"
+    "problems/1-100/1-20/p4.cpp"
+    "problems/1-100/1-20/p5.cpp"
+    "problems/1-100/1-20/p6.cpp"
+    "problems/1-100/1-20/p7.cpp"
+    "problems/1-100/1-20/p8.cpp"
 )
 
 add_executable(ProjectEulerApp
