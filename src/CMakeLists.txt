@@ -1,8 +1,12 @@
 set(MATH_HEADERS
+    "math/divisors.hpp"
     "math/primes.hpp"
+    "math/sequences.hpp"
 )
 set(MATH_SOURCES
+    "math/divisors.cpp"
     "math/primes.cpp"
+    "math/sequences.cpp"
 )
 
 set(PROBLEMS_HEADERS
@@ -20,6 +24,8 @@ set(PROBLEMS_SOURCES
     "problems/1-100/1-20/p8.cpp"
     "problems/1-100/1-20/p9.cpp"
     "problems/1-100/1-20/p10.cpp"
+    "problems/1-100/1-20/p11.cpp"
+    "problems/1-100/1-20/p12.cpp"
 )
 
 add_executable(ProjectEulerApp
