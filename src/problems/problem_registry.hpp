@@ -2,6 +2,7 @@
 #define PROJECT_EULER_PROBLEMS_PROBLEM_REGISTRY_HPP
 
 // STL
+#include <cstdint>
 #include <iostream>
 #include <functional>
 #include <map>
