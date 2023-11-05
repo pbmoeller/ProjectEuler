@@ -2,7 +2,6 @@
 #include "math/divisors.hpp"
 #include "math/sequences.hpp"
 
-
 int64_t problem_12()
 {
     int64_t n = 0;
