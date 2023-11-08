@@ -33,6 +33,8 @@ set(PROBLEMS_SOURCES
     "problems/1-100/1-20/p17.cpp"
     "problems/1-100/1-20/p18.cpp"
     "problems/1-100/1-20/p19.cpp"
+    "problems/1-100/1-20/p20.cpp"
+    "problems/1-100/21-40/p21.cpp"
 )
 
 add_executable(ProjectEulerApp
