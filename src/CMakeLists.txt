@@ -35,6 +35,7 @@ set(PROBLEMS_SOURCES
     "problems/1-100/1-20/p19.cpp"
     "problems/1-100/1-20/p20.cpp"
     "problems/1-100/21-40/p21.cpp"
+    "problems/1-100/21-40/p22.cpp"
 )
 
 add_executable(ProjectEulerApp
@@ -48,4 +49,9 @@ add_executable(ProjectEulerApp
 target_include_directories(ProjectEulerApp
     PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
+)
+
+add_custom_command(TARGET ProjectEulerApp POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory
+                       ${PROJECT_SOURCE_DIR}/data $<TARGET_FILE_DIR:ProjectEulerApp>/data
 )
