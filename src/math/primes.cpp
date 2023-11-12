@@ -1,5 +1,7 @@
 #include "math/primes.hpp"
 
+#include <cmath>
+
 namespace pe {
 
 bool isPrime(int64_t number)
@@ -18,6 +20,46 @@ bool isPrime(int64_t number)
             return false;
         }
     }
+    return true;
+}
+
+constexpr int64_t numberOfDigits(int64_t number)
+{
+    int64_t digits = 0;
+    while(number > 0) {
+        ++digits;
+        number /= 10;
+    }
+    return digits;
+}
+
+int64_t rotateNumberLeft(int64_t number, int64_t digits = -1)
+{
+    if(digits == -1) {
+        digits = numberOfDigits(number);
+    }
+
+    int64_t lastDigit = number % 10;
+    int64_t result = number / 10 + lastDigit * std::pow(10, digits - 1);
+
+    return result;
+}
+
+bool isCircularPrime(int64_t number)
+{
+    if(!isPrime(number)) {
+        return false;
+    }
+
+    int64_t digits = numberOfDigits(number);
+    int64_t nextNumber = number;
+    for(int64_t i = 0; i < digits - 1; ++i) {
+        nextNumber = rotateNumberLeft(nextNumber, digits);
+        if(!isPrime(nextNumber)) {
+            return false;
+        }
+    }
+
     return true;
 }
 
