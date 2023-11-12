@@ -2,11 +2,13 @@ set(MATH_HEADERS
     "math/divisors.hpp"
     "math/primes.hpp"
     "math/sequences.hpp"
+    "math/math.hpp"
 )
 set(MATH_SOURCES
     "math/divisors.cpp"
     "math/primes.cpp"
     "math/sequences.cpp"
+    "math/math.cpp"
 )
 
 set(PROBLEMS_HEADERS

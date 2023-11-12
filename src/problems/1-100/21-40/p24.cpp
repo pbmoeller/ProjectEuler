@@ -1,15 +1,7 @@
 #include "problems/problem_registry.hpp"
+#include "math/math.hpp"
 
 #include <vector>
-
-int64_t factorial(int64_t n)
-{
-    if(n <= 1) {
-        return 1;
-    } else {
-        return factorial(n - 1) * n;
-    }
-}
 
 std::vector<int64_t> calculate_nth_permutation(std::vector<int64_t> &elements, int64_t n)
 {
@@ -17,8 +9,9 @@ std::vector<int64_t> calculate_nth_permutation(std::vector<int64_t> &elements, i
     n -= 1;
 
     for(int64_t size = elements.size(); size > 0; --size) {
-        int64_t index = n / factorial(size - 1);
-        n %= factorial(size - 1);
+        int64_t f = pe::factorial(size - 1);
+        int64_t index = n / f;
+        n %= f;
 
         results.push_back(elements[index]);
         elements.erase(elements.begin() + index);
