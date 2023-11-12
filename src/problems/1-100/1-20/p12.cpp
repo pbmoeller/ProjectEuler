@@ -8,8 +8,8 @@ int64_t problem_12()
     int64_t nextTrinangleNumber = 0;
     bool found = false;
     while(!found) {
-        nextTrinangleNumber = calculate_nth_triangle_number(n);
-        auto divisors = divisorsOf(nextTrinangleNumber);
+        nextTrinangleNumber = pe::calculate_nth_triangle_number(n);
+        auto divisors = pe::divisorsOf(nextTrinangleNumber);
         if(divisors.size() > 500) {
             found = true;
         }

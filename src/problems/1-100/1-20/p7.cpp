@@ -3,7 +3,7 @@
 
 int64_t problem_7()
 {
-    return generate_n_primes(10001).back();
+    return pe::generate_n_primes(10001).back();
 }
 
 REGISTER_FUNCTION(7, problem_7);

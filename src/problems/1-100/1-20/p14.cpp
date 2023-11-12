@@ -10,7 +10,7 @@ int64_t problem_14()
 
         int64_t number = n;
         while(number != 1) {
-            number = calculate_next_collatz_number(number);
+            number = pe::calculate_next_collatz_number(number);
             ++steps;
         }
         if(steps > maxSteps) {

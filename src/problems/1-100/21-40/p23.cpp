@@ -10,7 +10,7 @@ int64_t problem_23()
     const int64_t upperLimit = 28123;
     std::vector<int64_t> abundantNumbers;
     for(int64_t n = 4; n < upperLimit; ++n) {
-        std::vector<int64_t> properDivisors = properDivisorsOf(n);
+        std::vector<int64_t> properDivisors = pe::properDivisorsOf(n);
         int64_t sum = std::accumulate(properDivisors.begin(), properDivisors.end(), 0LL);
         if(sum > n) {
             abundantNumbers.push_back(n);

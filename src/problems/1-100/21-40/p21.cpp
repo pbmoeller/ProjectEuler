@@ -9,7 +9,7 @@ int64_t problem_21()
 {
     std::vector<int64_t> numberPairs(10001, 0);
     for(int64_t n = 2; n <= 10000; ++n) {
-        auto d = properDivisorsOf(n);
+        auto d = pe::properDivisorsOf(n);
         numberPairs[n] = std::accumulate(d.begin(), d.end(), 0LL);
     }
 

@@ -2,6 +2,8 @@
 
 #include <cmath>
 
+namespace pe {
+
 std::vector<int64_t> divisorsOf(int64_t number)
 {
     std::vector<int64_t> divisors{1, number};
@@ -33,3 +35,5 @@ std::vector<int64_t> properDivisorsOf(int64_t number)
 
     return divisors;
 }
+
+} // namespace pe

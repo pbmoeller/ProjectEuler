@@ -1,5 +1,6 @@
 #include "math/primes.hpp"
 
+namespace pe {
 
 bool isPrime(int64_t number)
 {
@@ -45,3 +46,5 @@ std::vector<int64_t> generate_primes_below(int64_t upperBound)
     }
     return primes;
 }
+
+} // namespace pe

@@ -15,7 +15,7 @@ int64_t problem_5()
     for(int i = 0; i < requiredDivisors.size(); ++i) {
         maxNumber *= requiredDivisors[i];
     }
-    std::vector<int64_t> divisors = divisorsOf(maxNumber);
+    std::vector<int64_t> divisors = pe::divisorsOf(maxNumber);
 
     std::sort(divisors.begin(), divisors.end());
     

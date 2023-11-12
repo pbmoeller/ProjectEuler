@@ -6,7 +6,7 @@
 int64_t problem_10()
 {
     int64_t sum = 0;
-    auto primes = generate_primes_below(2'000'000);
+    auto primes = pe::generate_primes_below(2'000'000);
     sum = std::accumulate(primes.begin(), primes.end(), sum);
     return sum;
 }
