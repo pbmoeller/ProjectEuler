@@ -28,13 +28,17 @@ int main(int argc, char **argv)
     }
     std::cout << "The Runner will try to solve problem: " << problem << std::endl;
 
-    std::chrono::time_point begin = std::chrono::system_clock::now();
-    int64_t solution = ProblemRegistry::getInstance().execute(problem);
-    std::chrono::time_point end = std::chrono::system_clock::now();
+    try {
+        std::chrono::time_point begin = std::chrono::system_clock::now();
+        int64_t solution = ProblemRegistry::getInstance().execute(problem);
+        std::chrono::time_point end = std::chrono::system_clock::now();
 
-    std::cout << "The solution for problem " << problem << " is \"" << solution << "\" !" << std::endl;
-    std::cout << "The solver took " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()
-        << " ms (" << configuration << " Build)." << std::endl;
+        std::cout << "The solution for problem " << problem << " is \"" << solution << "\" !" << std::endl;
+        std::cout << "The solver took " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()
+            << " ms (" << configuration << " Build)." << std::endl;
+    } catch(std::exception &e) {
+        std::cerr << "Exception caught while calculating problem: " << problem << std::endl;
+    }
 
     return 0;
 }
