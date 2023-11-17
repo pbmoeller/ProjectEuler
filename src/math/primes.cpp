@@ -89,4 +89,13 @@ std::vector<int64_t> generate_primes_below(int64_t upperBound)
     return primes;
 }
 
+int64_t nextPrime(int64_t prime)
+{
+    int64_t nextPrime = prime + 1;
+    while(!isPrime(nextPrime)) {
+        ++nextPrime;
+    }
+    return nextPrime;
+}
+
 } // namespace pe

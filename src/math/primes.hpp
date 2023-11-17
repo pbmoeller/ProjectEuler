@@ -11,6 +11,7 @@ bool isCircularPrime(int64_t number);
 
 std::vector<int64_t> generate_n_primes(int64_t count);
 std::vector<int64_t> generate_primes_below(int64_t upperBound);
+int64_t nextPrime(int64_t prime);
 
 } // namespace pe
 
