@@ -6,6 +6,8 @@
 
 namespace pe {
 
+bool isPalindrome(const std::string &str);
+void removeLeadingChars(std::string &str, const char ch);
 size_t multiplyStringWith(std::string &number, int n);
 std::string addStrings(const std::string &str1, const std::string &str2);
 

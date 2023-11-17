@@ -2,6 +2,28 @@
 
 namespace pe {
 
+bool isPalindrome(const std::string &str)
+{
+    int idx_fwd = 0;
+    int idx_bwd = str.length() - 1;
+    for(; idx_fwd <= idx_bwd; ++idx_fwd, --idx_bwd) {
+        if(str[idx_fwd] != str[idx_bwd]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void removeLeadingChars(std::string &str, const char ch)
+{
+    size_t pos = 0;
+    while(pos < str.length() && str[pos] == ch) {
+        ++pos;
+    }
+
+    str.erase(0, pos);
+}
+
 size_t multiplyStringWith(std::string &number, int n)
 {
     size_t length = number.size();
