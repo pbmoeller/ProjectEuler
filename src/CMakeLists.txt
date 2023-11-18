@@ -52,6 +52,7 @@ set(PROBLEMS_SOURCES
     "problems/1-100/21-40/p35.cpp"
     "problems/1-100/21-40/p36.cpp"
     "problems/1-100/21-40/p37.cpp"
+    "problems/1-100/21-40/p39.cpp"
     "problems/1-100/41-60/p48.cpp"
     "problems/1-100/81-100/p96.cpp"
     "problems/1-100/81-100/p99.cpp"
