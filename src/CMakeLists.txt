@@ -53,6 +53,7 @@ set(PROBLEMS_SOURCES
     "problems/1-100/21-40/p36.cpp"
     "problems/1-100/21-40/p37.cpp"
     "problems/1-100/21-40/p39.cpp"
+    "problems/1-100/21-40/p40.cpp"
     "problems/1-100/41-60/p48.cpp"
     "problems/1-100/81-100/p96.cpp"
     "problems/1-100/81-100/p99.cpp"
@@ -70,6 +71,16 @@ target_include_directories(ProjectEulerApp
     PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
+
+# Enable Edit and Continue.
+if(MSVC AND WIN32 AND NOT MSVC_VERSION VERSION_LESS 142)
+    target_link_options(ProjectEulerApp 
+        PRIVATE 
+            $<$<CONFIG:Debug>:/INCREMENTAL>)
+    target_compile_options(ProjectEulerApp
+        PRIVATE
+            $<$<CONFIG:Debug>:/ZI>)
+endif()
 
 add_custom_command(TARGET ProjectEulerApp POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy_directory
