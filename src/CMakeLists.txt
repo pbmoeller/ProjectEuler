@@ -4,6 +4,7 @@ set(MATH_HEADERS
     "math/sequences.hpp"
     "math/math.hpp"
     "math/string.hpp"
+    "math/io.hpp"
 )
 set(MATH_SOURCES
     "math/divisors.cpp"
@@ -11,6 +12,7 @@ set(MATH_SOURCES
     "math/sequences.cpp"
     "math/math.cpp"
     "math/string.cpp"
+    "math/io.cpp"
 )
 
 set(PROBLEMS_HEADERS
@@ -54,6 +56,7 @@ set(PROBLEMS_SOURCES
     "problems/1-100/21-40/p37.cpp"
     "problems/1-100/21-40/p39.cpp"
     "problems/1-100/21-40/p40.cpp"
+    "problems/1-100/41-60/p42.cpp"
     "problems/1-100/41-60/p48.cpp"
     "problems/1-100/81-100/p96.cpp"
     "problems/1-100/81-100/p99.cpp"

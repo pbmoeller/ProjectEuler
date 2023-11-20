@@ -1,26 +1,13 @@
 #include "problems/problem_registry.hpp"
+#include "math/io.hpp"
 
-#include <fstream>
 #include <string>
 #include <vector>
 #include <algorithm>
 
 int64_t problem_22()
 {
-    // Open file.
-    std::ifstream ifs("data/p22_names.txt");
-    if(!ifs.is_open()) {
-        throw std::runtime_error("[P 22] Cannot read file: p22_names.txt");
-    }
-
-    // Read file content
-    std::string fileContent;
-    ifs.seekg(0, ifs.end);
-    fileContent.reserve(static_cast<size_t>(ifs.tellg()));
-    ifs.seekg(0, ifs.beg);
-    fileContent.assign((std::istreambuf_iterator<char>(ifs)),
-                       std::istreambuf_iterator<char>());
-    ifs.close();
+    std::string fileContent = pe::readFile("data/p22_names.txt");
 
     // Read names
     size_t first = -1;
