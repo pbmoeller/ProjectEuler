@@ -37,7 +37,7 @@ int64_t sample_82()
                                                  minimalPathSums[row - 1][col] + matrix[row][col]);
         }
         // 3.
-        for(int64_t row = 0; row < 4; ++row) {
+        for(int64_t row = 3; row >= 0; --row) {
             minimalPathSums[row][col] = std::min(minimalPathSums[row][col],
                                                  minimalPathSums[row + 1][col] + matrix[row][col]);
         }
